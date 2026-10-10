@@ -1,0 +1,79 @@
+.fxdbuttonr {
+  position: fixed !important;
+  bottom: 75px;
+  right: 0px;
+  background-color: #ff9934;
+  color: white;
+  padding: 5px 0px 2px 5px;   
+
+  border: none;
+  border-radius: 10px 0px 0px 10px;
+
+  cursor: pointer;
+  min-width: 60px;
+
+  z-index: 1000;
+  animation: myanimation 1s infinite
+  
+}
+
+
+@keyframes myanimation {
+  100% {background-color: #ff9934;}
+  100% {background-color: #6C60FE;}
+  
+}
+
+
+.fxdbuttonb {
+    position: fixed !important;
+    bottom: 60px;
+    right: 0px;
+    background-color: #ff9934;
+    color: white;
+    padding: 5px 0px 2px 5px;   
+
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+  text-align: center;
+    cursor: pointer;
+    min-width: 60px;
+
+    z-index: 1000;
+    animation: myanimation 1s infinite
+    
+  }
+  
+  
+  @keyframes myanimation {
+    100% {background-color: #ff9934;}
+    100% {background-color: #6C60FE;}
+    
+  }
+
+  .fxdbuttonp {
+    position: fixed !important;
+    bottom: 110px;
+    right: 0px;
+    background-color: #ff9934;
+    color: white;
+    padding: 5px 0px 2px 5px;   
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+    font-weight:bold;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    min-width: 60px;
+    z-index: 1000;
+    animation: myanimation1 1s infinite
+    
+  }
+  
+  
+  @keyframes myanimation1 {
+    100% {background-color: #ff9934;}
+    100% {background-color: #6C60FE;}
+    
+  }

@@ -1,0 +1,95 @@
+ <?php
+session_start();
+error_reporting(0);
+include('includes/dbconnection.php');
+?>
+ <footer id="footer" class="footer footer-1 bg-white">
+            <!-- Widget Section
+    ============================================= -->
+            <div class="footer-widget">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 widget--about">
+                            <div class="widget--content">
+                                <?php
+
+                    
+$ret=mysqli_query($con,"select * from tblpage where PageType='contactus'");
+$cnt=1;
+while ($row=mysqli_fetch_array($ret)) {
+
+?>
+                            <div class="widget--title">
+                                <h5>Contact Us</h5>
+                            </div>
+                                <p><?php  echo $row['PageDescription'];?></p>
+                                <div class="footer--contact">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><i class="fa fa-phone" aria-hidden="true"></i> +<?php  echo $row['MobileNumber'];?></li>
+                                        <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <?php  echo $row['Email'];?></li>
+                                        <li><i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                        <?php  echo $row['Email'];?></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <?php } ?>
+                        </div>
+                        <!-- .col-md-2 end -->
+                        <div class="col-xs-12 col-sm-3 col-md-2 col-md-offset-1 widget--links">
+                            <div class="widget--title">
+                                <h5>Pet Zone</h5>
+                            </div>
+                            <div class="widget--content">
+                                <ul class="list-unstyled mb-0">
+                                    <li><a href="about.php">About us</a></li>
+                                    <li><a href="about.php">Services</a></li>
+                                    <li><a href="contact.php">Contact us</a></li>
+                                   <li><a href="pets-grid.php">Pets</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col-md-2 end -->
+                        <div class="col-xs-12 col-sm-3 col-md-2 widget--links">
+                            <div class="widget--title">
+                                <h5>More Links</h5>
+                            </div>
+                            <div class="widget--content">
+                                <ul class="list-unstyled mb-0">
+                                    
+                                    <li><a href="privacy.php">Privacy Policy</a></li>
+                                    <li><a href="terms.php">Terms & Conditions</a></li>
+                                    <li><a href="admin/login.php">Staff</a></li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- .col-md-2 end -->
+                        <div class="col-xs-12 col-sm-12 col-md-4 text-center widget--newsletter">
+                            <img src="assets/images/logo/petzone.png" width="150" height="150" alt="logo">
+                        </div>
+                        <!-- .col-md-4 end -->
+
+                    </div>
+                </div>
+                <!-- .container end -->
+            </div>
+            <!-- .footer-widget end -->
+
+            <!-- Copyrights
+    ============================================= -->
+            <div class="footer--copyright text-center bg-dark">
+                <div class="container">
+                    <div class="row footer--bar">
+                        <div class="col-xs-12 col-sm-12 col-md-12">
+                            <span>PetZone.lk  
+
+<?php $year = date("Y");echo $year;?></span>
+                        </div>
+
+                    </div>
+                    <!-- .row end -->
+                </div>
+                <!-- .container end -->
+            </div>
+            <!-- .footer-copyright end -->
+        </footer>
